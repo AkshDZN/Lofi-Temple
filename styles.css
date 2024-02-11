@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Geist';
+    src: url('assets/fonts/Geist/GeistVariableVF.woff2') format('woff2');
+  }
+
+body {
+    background-image: url('assets/bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.time {
+    color: white;
+    font-family: Geist;
+    font-size: 3.19rem;
+    font-weight: 600;
+}
+
+.ampm {
+    color: white;
+    font-family: Geist;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.ampmbx {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.timebx {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 66px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+}
+
+.tool {
+    width: 40px;
+    height: 40px;
+}
+
+.toolbox {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 77px;
+    right: 100px;
+}

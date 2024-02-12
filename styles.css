@@ -46,7 +46,17 @@ body {
 .tool {
     width: 40px;
     height: 40px;
+
+    transition: all;
+    transition-timing-function: cubic-bezier(.49,.12,0,1);
+    transition-duration: 500ms;
 }
+
+.tool:hover {
+    translate: 0px -10px;
+    scale: 1.2;
+}
+
 
 .toolbox {
     display: flex;
@@ -79,6 +89,7 @@ body {
 .mixer {
     position: fixed;
     display: flex;
+    flex-direction: row-reverse;
     gap: 20px;
     top: 0;
     right: 0;

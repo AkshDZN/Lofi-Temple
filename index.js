@@ -37,6 +37,28 @@ function pomoClick() {
     }
 }
 
+const themes = document.querySelector(".themebx");
+
+let thMenuState = 0;
+
+function themeMenu() {
+	if (thMenuState === 0) {
+        themes.style.translate = "0px 0px";
+        themes.style.opacity = "100%";
+        themes.style.scale = "1";
+		
+        thMenuState = 1;
+    } else if (thMenuState === 1) {
+        themes.style.translate = "0px 50px";
+        themes.style.opacity = "0%";
+        themes.style.scale = "0.8";
+        thMenuState = 0;
+    }
+}
+
+
+// pomodoro code
+
 
 let timer;
 let tMinutes = 24;
@@ -93,5 +115,69 @@ function askTime() {
 		}
 	}
 }
+
+// theme switcher 
+const r = document.querySelector(":root");
+
+//blaze
+const th1bg = "url('assets/blaze.png')";
+const th1dash = "rgba(131, 43, 24, 0.26)";
+const th1dashHover = "rgba(131, 43, 24, 0.5)";
+const th1dstroke = "0.5px solid rgba(255, 187, 173, 0.26)";
+
+// play
+const th2bg = "url('assets/play.png')";
+const th2dash = "rgba(24, 28, 131, 0.26)";
+const th2dashHover = "rgba(24, 28, 131, 0.5)";
+const th2dstroke = "0.5px solid rgba(179, 173, 255, 0.26)";
+
+// luxury
+const th3bg = "url('assets/luxury.png')";
+const th3dash = "rgba(24, 28, 131, 0.26)";
+const th3dashHover = "rgba(24, 28, 131, 0.5)";
+const th3dstroke = "0.5px solid rgba(179, 173, 255, 0.26)";
+
+//dreams
+const th4bg = "url('assets/dreams.png')";
+const th4dash = "rgba(131, 43, 24, 0.26)";
+const th4dashHover = "rgba(131, 43, 24, 0.5)";
+const th4dstroke = "0.5px solid rgba(255, 187, 173, 0.26)";
+
+//memories
+const th5bg = "url('assets/memories.png')";
+const th5dash = "rgba(131, 43, 24, 0.26)";
+const th5dashHover = "rgba(131, 43, 24, 0.5)";
+const th5dstroke = "0.5px solid rgba(255, 187, 173, 0.26)";
+
+function theme(thno) {
+	if (thno === 1) {
+		r.style.setProperty("--bg" , th1bg);
+		r.style.setProperty("--dashBg" , th1dash);
+		r.style.setProperty("--dashBgHover" , th1dashHover);
+		r.style.setProperty("--dashStroke" , th1dstroke);
+	} else if (thno === 2) {
+		r.style.setProperty("--bg" , th2bg);
+		r.style.setProperty("--dashBg" , th2dash);
+		r.style.setProperty("--dashBgHover" , th2dashHover);
+		r.style.setProperty("--dashStroke" , th2dstroke);
+	} else if (thno === 3) {
+		r.style.setProperty("--bg" , th3bg);
+		r.style.setProperty("--dashBg" , th3dash);
+		r.style.setProperty("--dashBgHover" , th3dashHover);
+		r.style.setProperty("--dashStroke" , th3dstroke);
+	} else if (thno === 4) {
+		r.style.setProperty("--bg" , th4bg);
+		r.style.setProperty("--dashBg" , th4dash);
+		r.style.setProperty("--dashBgHover" , th4dashHover);
+		r.style.setProperty("--dashStroke" , th4dstroke);
+	} else if (thno === 5) {
+		r.style.setProperty("--bg" , th5bg);
+		r.style.setProperty("--dashBg" , th5dash);
+		r.style.setProperty("--dashBgHover" , th5dashHover);
+		r.style.setProperty("--dashStroke" , th5dstroke);
+	}
+}
+
+
 
 

@@ -8,11 +8,38 @@
 </head>
 <body>
 
+
     <div class="screen">
 
         <div class="timebx">
             <div class="time">12:34</div>
             <div class="meridian">AM</div>
+        </div>
+
+        <div class="themebx">
+            <div class="dash-theme">
+        
+                <div class="dash-theme-container" onclick="theme(1)">
+                    <div class="theme-icon1" id="th1"></div>
+                </div> 
+    
+                <div class="dash-theme-container" onclick="theme(2)"> 
+                    <div class="theme-icon2" id="th2"></div> 
+                </div>
+    
+                <div class="dash-theme-container" onclick="theme(3)"> 
+                    <div class="theme-icon3" id="th3"></div> 
+                </div>
+    
+                <div class="dash-theme-container" onclick="theme(4)">
+                    <div class="theme-icon4" id="th4"></div>
+                </div>
+    
+                <div class="dash-theme-container" onclick="theme(5)">
+                    <div class="theme-icon5" id="th5"></div>
+                </div>
+        
+            </div>
         </div>
     
         <div class="dashbx">
@@ -26,7 +53,7 @@
                     <img src="assets/icons/sounds.svg" alt="play" class="icon">
                 </div>
             
-                <div class="dash-icon-container">
+                <div class="dash-icon-container" onclick="themeMenu()">
                     <div class="theme-indicator"></div>
                 </div>
             
@@ -51,6 +78,9 @@
         </div>
 
     </div>
+
+
+    
     
     <script src="index.js"></script>
 </body>

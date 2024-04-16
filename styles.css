@@ -8,6 +8,7 @@
   --dashIconStroke: 0.5px solid rgba(255, 255, 255, 0.29);
 
   --dashBg: rgba(131, 43, 24, 0.26);
+  --dashBgHover: rgba(131, 43, 24, 0.5);
   --dashStroke: 0.5px solid rgba(255, 187, 173, 0.26);
 
   --blur: blur(9px);
@@ -123,6 +124,12 @@ body {
   backdrop-filter: var(--blur);
   text-align: center;
   line-height: 56px;
+  transition: all cubic-bezier(.45,.28,0,.99) 200ms;
+
+}
+
+.pomodoro:hover {
+  background-color: var(--dashBgHover);  
 }
 
 .pomo-edit {

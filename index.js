@@ -58,6 +58,7 @@ function startTimer() {
 
 		if (tMinutes <= -1) {
 			clearInterval(timer);
+			alert("timer ended");
 		}
 	}, 1000);
 }

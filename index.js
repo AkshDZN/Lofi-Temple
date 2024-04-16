@@ -178,6 +178,16 @@ function theme(thno) {
 	}
 }
 
-
-
+$("#slider").roundSlider({
+    sliderType: "min-range",
+    width: 22,
+    radius: 130,
+    value: 30,
+    mouseScrollAction: true,
+    circleShape: "pie",
+    startAngle: 315,
+    lineCap: "round",
+	keyboardAction: false
+});
+  
 

@@ -5,15 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lofi Temple</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css" rel="stylesheet" />
 </head>
 <body>
-
-
+    
     <div class="screen">
 
         <div class="timebx">
             <div class="time">12:34</div>
             <div class="meridian">AM</div>
+        </div>
+
+        <div class="soundmixerbx">
+            <div class="soundmixer">
+                <img src="assets/sounds/fire.jpg" alt="fire" class="soundimage">
+            </div>
+            
+            <div id="slider"></div>
+
+
+            <div class="switchbx">
+                <img src="assets/icons/play.svg" alt="left" class="sound-switch">
+                <img src="assets/icons/play.svg" alt="left" class="sound-switch">
+            </div>
         </div>
 
         <div class="themebx">
@@ -45,12 +59,12 @@
         <div class="dashbx">
             <div class="dash">
     
-                <div class="dash-icon-container">
+                <!-- <div class="dash-icon-container">
                     <img src="assets/icons/play.svg" alt="play" class="icon">
-                </div>
+                </div> -->
             
                 <div class="dash-icon-container">
-                    <img src="assets/icons/sounds.svg" alt="play" class="icon">
+                    <img src="assets/icons/sounds.svg" alt="sounds" class="icon">
                 </div>
             
                 <div class="dash-icon-container" onclick="themeMenu()">
@@ -58,7 +72,7 @@
                 </div>
             
                 <div class="dash-icon-container">
-                    <img src="assets/icons/more.svg" alt="play" class="icon">
+                    <img src="assets/icons/more.svg" alt="more" class="icon">
                 </div>
         
             </div>
@@ -81,7 +95,8 @@
 
 
     
-    
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

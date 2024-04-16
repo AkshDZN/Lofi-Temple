@@ -269,3 +269,68 @@ body {
   transition: all cubic-bezier(.45,.28,0,.99) 200ms;
 
 }
+
+.soundmixerbx {
+  display: flex;
+  justify-content: center;
+}
+
+.soundmixer {
+  width: 309px;
+  height: 309px;
+  background-color: var(--dashBg);
+  border: var(--dashStroke);
+  border-radius: 800px;
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.soundimage {
+  width: 147px;
+  height: 147px;
+  border-radius: 800px;
+  border: var(--dashIconStroke);
+}
+
+.sound-switch {
+  width: 50px;
+  height: 50px;
+  rotate: 180deg;
+}
+
+.sound-switch:nth-child(2) {
+  rotate: 0deg;
+}
+
+.switchbx {
+  position: absolute;
+  display: flex;
+  margin-top: 239px;
+}
+
+#slider {
+  mix-blend-mode: screen;
+  position: absolute;
+  margin-top: 22px;
+}
+
+.rs-control .rs-range-color {
+  background-color: #ffffff;
+}
+.rs-control .rs-path-color {
+  background-color: #686868;
+}
+.rs-control .rs-handle {
+  background-color: #ffffff;
+}
+.rs-control .rs-bg-color {
+  background-color: #000000;
+}
+
+#slider.rs-animation .rs-transition  {
+  transition: all ease-in-out 200ms;
+}

@@ -182,7 +182,7 @@ $("#slider").roundSlider({
     sliderType: "min-range",
     width: 22,
     radius: 130,
-    value: 30,
+    value: 0,
     mouseScrollAction: true,
     circleShape: "pie",
     startAngle: 315,
@@ -190,4 +190,56 @@ $("#slider").roundSlider({
 	keyboardAction: false
 });
   
+//  sounds mixer
 
+const soundmixer = document.querySelector(".soundmixerbx");
+const soundimage = document.querySelector(".soundimage");
+
+let soundState = 0;
+function soundMenu() {
+	if (soundState === 0) {
+		soundmixer.style.display = "flex";
+
+		soundState = 1;
+	} else if (soundState === 1) {
+		soundmixer.style.display = "none";
+
+		soundState = 0;
+	}
+}
+
+let sImgIndex = 1;
+
+function updateSoundImg() {
+	if (sImgIndex === 1) {
+		soundimage.src = "assets/sounds/fire.jpg";
+	} else if (sImgIndex === 2) {
+		soundimage.src = "assets/sounds/rain.png";
+	} else if (sImgIndex === 3) {
+		soundimage.src = "assets/sounds/birds.png";
+	} else if (sImgIndex === 4) {
+		soundimage.src = "assets/sounds/ocean.png";
+	}
+}
+
+function sImgL() {
+	sImgIndex++;
+
+	if (sImgIndex > 4) {
+		sImgIndex = 4;
+	}
+
+	updateSoundImg();
+
+}
+
+function sImgR() {
+	sImgIndex--;
+
+	if (sImgIndex < 1) {
+		sImgIndex = 1;
+	}
+
+	updateSoundImg();
+
+}

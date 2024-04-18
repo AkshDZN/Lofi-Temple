@@ -13,6 +13,10 @@
 
   --blur: blur(9px);
 
+  --mixerAccent : rgba(255, 74, 0, 1);
+  --mixerSecondary : rgba(255, 196, 172, 1);
+
+
 }
 
 body {
@@ -272,14 +276,17 @@ body {
 }
 
 .soundmixerbx {
-  display: none;
+  /* display: none; */
+  display: flex;
   justify-content: center;
+  scale: 0;
+  transition: all cubic-bezier(.45,.28,0,.99) 200ms;
 }
 
 .soundmixer {
   width: 309px;
   height: 309px;
-  background-color: var(--dashBg);
+  background-color: white;
   border: var(--dashStroke);
   border-radius: 800px;
   -webkit-backdrop-filter: var(--blur);
@@ -295,6 +302,7 @@ body {
   height: 147px;
   border-radius: 800px;
   border: var(--dashIconStroke);
+
 }
 
 .sound-switch {
@@ -319,24 +327,21 @@ body {
 }
 
 #slider {
-  mix-blend-mode: screen;
   position: absolute;
-  margin-top: 22px;
+  z-index: -1;
 }
+
 
 .rs-control .rs-range-color {
-  background-color: #ffffff;
+  background-color: var(--mixerAccent);
 }
 .rs-control .rs-path-color {
-  background-color: #686868;
+  background-color: var(--mixerSecondary);
 }
 .rs-control .rs-handle {
-  background-color: #ffffff;
+  background-color: var(--mixerAccent);
 }
 .rs-control .rs-bg-color {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
-#slider.rs-animation .rs-transition  {
-  transition: all ease-in-out 200ms;
-}

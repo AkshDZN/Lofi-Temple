@@ -22,6 +22,7 @@
 body {
     background-color: black;
     margin: 0;
+    padding: 0;
     background-image: var(--bg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -275,73 +276,46 @@ body {
 
 }
 
-.soundmixerbx {
-  /* display: none; */
-  display: flex;
-  justify-content: center;
-  scale: 0;
-  transition: all cubic-bezier(.45,.28,0,.99) 200ms;
-}
+/* mixer */
 
-.soundmixer {
-  width: 309px;
-  height: 309px;
-  background-color: white;
+.mixer {
+  width: 404px;
+  height: 294px;
+  background-color: var(--dashBg);
   border: var(--dashStroke);
-  border-radius: 800px;
   -webkit-backdrop-filter: var(--blur);
   backdrop-filter: var(--blur);
-
+  border-radius: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
-.soundimage {
-  width: 147px;
-  height: 147px;
-  border-radius: 800px;
+.sound {
+  width: 384px;
+  height: 95px;
+  background-image: url('assets/sounds/fire.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: var(--dashStroke);
+  border-radius: 16px;
+  margin-top: 10px;
+}
+
+.sound-title {
+  font-family: 'Young Serif';
+  font-size: 0.88rem;
+  color: white;
+  width: fit-content;
+  height: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: var(--dashIconBg);
   border: var(--dashIconStroke);
-
+  border-radius: 500px;
+  text-align: center;
+  line-height: 26px;
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
 }
-
-.sound-switch {
-  width: 50px;
-  height: 50px;
-  rotate: 180deg;
-  transition: all cubic-bezier(.45,.28,0,.99) 200ms;
-}
-
-.sound-switch:hover {
-  scale: 1.2;
-}
-
-.sound-switch:nth-child(2) {
-  rotate: 0deg;
-}
-
-.switchbx {
-  position: absolute;
-  display: flex;
-  margin-top: 239px;
-}
-
-#slider {
-  position: absolute;
-  z-index: -1;
-}
-
-
-.rs-control .rs-range-color {
-  background-color: var(--mixerAccent);
-}
-.rs-control .rs-path-color {
-  background-color: var(--mixerSecondary);
-}
-.rs-control .rs-handle {
-  background-color: var(--mixerAccent);
-}
-.rs-control .rs-bg-color {
-  background-color: #ffffff;
-}
-

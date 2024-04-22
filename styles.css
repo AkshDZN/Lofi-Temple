@@ -289,6 +289,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .sound {
@@ -301,7 +303,29 @@ body {
   border: var(--dashStroke);
   border-radius: 16px;
   margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 10px;
 }
+
+.sound:nth-child(2) {
+  background-image: url('assets/sounds/rain.png');
+}
+
+.sound:nth-child(3) {
+  background-image: url('assets/sounds/birds.png');
+}
+
+
+.sound:nth-child(4) {
+  background-image: url('assets/sounds/ocean.png');
+}
+
 
 .sound-title {
   font-family: 'Young Serif';
@@ -318,4 +342,49 @@ body {
   line-height: 26px;
   -webkit-backdrop-filter: var(--blur);
   backdrop-filter: var(--blur);
+}
+
+.mixerbar {
+  -webkit-appearance: none;
+  width: 316px;
+  height: 30px;
+  background-color: var(--dashIconBg);
+  border: var(--dashIconStroke);
+  border-radius: 500px;
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.mixerbar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 500px;
+}
+
+.mutebx {
+  width: 30px;
+  height: 30px;
+  background-color: var(--dashIconBg);
+  border: var(--dashIconStroke);
+  border-radius: 500px;
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mute {
+  width: 16px;
+  height: 16px;
+}
+
+.mixer-controls {
+  display: flex;
+  gap: 6px;
+  align-items: center;
 }

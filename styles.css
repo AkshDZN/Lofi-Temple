@@ -293,6 +293,10 @@ body {
   overflow-y: scroll;
 }
 
+.mixer::-webkit-scrollbar {
+  display: none;
+}
+
 .sound {
   width: 384px;
   height: 95px;
@@ -387,4 +391,13 @@ body {
   display: flex;
   gap: 6px;
   align-items: center;
+}
+
+.totalmixer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 0;
+  transition: all cubic-bezier(.45,.28,0,.99) 200ms;
+
 }

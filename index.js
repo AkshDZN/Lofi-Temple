@@ -197,3 +197,20 @@ function theme(thno) {
 
 	}
 }
+
+
+// soundmixer reveal 
+
+const mixer = document.querySelector(".totalmixer");
+
+let soundState = 0;
+
+function soundMenu() {
+	if (soundState === 0) {
+		mixer.style.scale = "1";
+		soundState = 1;
+	} else if (soundState === 1) {
+		mixer.style.scale = "0";
+		soundState = 0;
+	}
+}

@@ -214,3 +214,55 @@ function soundMenu() {
 		soundState = 0;
 	}
 }
+
+
+// sound mixer mute unmute
+
+const s1mute = document.getElementById('s1mute');
+const s2mute = document.getElementById('s2mute');
+const s3mute = document.getElementById('s3mute');
+const s4mute = document.getElementById('s4mute');
+
+let s1state = 0;
+function s1clicked() {
+	if (s1state === 0) {
+		s1mute.src = "assets/icons/unmute.svg";
+		s1state = 1;
+	} else if (s1state === 1) {
+		s1mute.src = "assets/icons/mute.svg";
+		s1state = 0;
+	}
+}
+
+let s2state = 0;
+function s2clicked() {
+	if (s2state === 0) {
+		s2mute.src = "assets/icons/unmute.svg";
+		s2state = 1;
+	} else if (s2state === 1) {
+		s2mute.src = "assets/icons/mute.svg";
+		s2state = 0;
+	}
+}
+
+let s3state = 0;
+function s3clicked() {
+	if (s3state === 0) {
+		s3mute.src = "assets/icons/unmute.svg";
+		s3state = 1;
+	} else if (s3state === 1) {
+		s3mute.src = "assets/icons/mute.svg";
+		s3state = 0;
+	}
+}
+
+let s4state = 0;
+function s4clicked() {
+	if (s4state === 0) {
+		s4mute.src = "assets/icons/unmute.svg";
+		s4state = 1;
+	} else if (s4state === 1) {
+		s4mute.src = "assets/icons/mute.svg";
+		s4state = 0;
+	}
+}
